@@ -78,22 +78,24 @@
 | **v4.7.1** | تطبيق الختم الرقمي `IndexCommand` لتجاهل إشعارات الإلغاء القديمة. | ❌ انهيار عند الإقلاع |
 | **v4.7.2** | تجربة استبدال `wx.CallAfter` بـ `core.callLater`. | ❌ انهيار عند الإقلاع |
 | **v4.7.3** | **الإصدار الذهبي المستقر:** إضافة دوال الحماية `_safeCallAfter` وتفادي الانهيار عند الإقلاع مع النجاح التام. | **✅ مستقر 100%** |
+| **v1.0.0-beta** | **النسخة التجريبية الأولى:** دعم التدويل الكامل (i18n) للتوافق مع لغة NVDA المحددة، إنشاء مستودع GitHub، وإدراج رابط المستودع في `manifest.ini`. | **🚀 متاح على GitHub** |
 
 ---
 
-## 📁 5. البنية الشجرية للمشروع المعتمد (`PolyVoice-4.7.3.nvda-addon`)
+## 📁 5. البنية الشجرية للمشروع المعتمد (`PolyVoice-1.0.0-beta.nvda-addon`)
 
 ```
-PolyVoice-4.7.3.nvda-addon (Root Level)
-├── manifest.ini                         # وصف الإضافة (version=4.7.3, minimumNVDAVersion=2026.1.0)
+PolyVoice-1.0.0-beta.nvda-addon (Root Level)
+├── manifest.ini                         # (version=1.0.0-beta, url=https://github.com/farid5006/PolyVoice)
+├── README.md                            # دليل الاستخدام والوصف الرسمي بالإنجليزية لـ GitHub
 ├── addon.xml                            # التوثيق والتحقق القياسي لـ NVDA
 ├── __init__.py                          # ملف التهيئة الرئيسي
 ├── documentation/
 │   └── readme.html                      # الدليل والتعليمات
 ├── globalPlugins/
 │   └── PolyVoice/
-│       ├── __init__.py
-│       └── settingsPanel.py             # واجهة تحديد الآلة المفضلـة لكل لغة
+│       ├── __init__.py                  # واجهة الإعدادات مع دعم التدويل i18n عبر addonHandler
+│       └── settingsPanel.py             # لوحة التخصيص متعددة اللغات المترجمة
 └── synthDrivers/
     └── PolyVoice/
         ├── __init__.py                  # النواة الرئيسية (تحوي _safeCallAfter و IndexCommand Guard)
@@ -105,11 +107,10 @@ PolyVoice-4.7.3.nvda-addon (Root Level)
 
 ---
 
-## 🏆 6. التوصيات المستقبلية والنشر على متجر NVDA
-عند رغبة المستخدم (فريد محمد) في نشر الإضافة مستقبلاً على متجر NVDA الرسمي (NVDA Add-on Store):
-1. الإضافة جاهزة بنسبة 100% وتلبي كافة شروط NVDA 2026.1.1 (64-bit AMD64).
-2. يجب الحفاظ على البنية الحالية في `_safeCallAfter` و `IndexCommand Guard` لضمان عدم حدوث أي تراجع (Regression) في المستقبـل.
-3. التوثيق في `readme.html` جاهز ومكتوب باللغة العربية الواضحة.
+## 🏆 6. التوصيات والنشر على GitHub
+- **رابط المستودع الرسمي:** `https://github.com/farid5006/PolyVoice`
+- **التدويل (i18n):** تم تفعيل `addonHandler.initTranslation()` واستخدام `_()` لضمان عرض واجهة الإعدادات بلغة NVDA المعينة لدى المستخدم (عربي/إنجليزي/إلخ).
+- **رابط المعلومات في NVDA:** حقل `url` داخل `manifest.ini` تم ربطه مباشرة برابط المستودع ليعرضه NVDA لكل مستخدم يفتح "معلومات الإضافة".
 
 ---
 *تم إعداد وتحديث هذا التقرير الشامل والموثق بفضل الله ثم العمل الدؤوب في ملف المشروع `D:\documents\programming corse\PolyVoice\agent.md` ليصبح المرجع الأول والكامل لأي تطوير مستقبلي.*
