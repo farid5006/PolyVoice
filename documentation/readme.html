@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>PolyVoice — دليل الإضافة</title>
+<style>
+body { font-family: "Segoe UI", Tahoma, sans-serif; line-height: 1.7; padding: 1em 2em; max-width: 800px; margin: auto; }
+h1 { color: #1a5276; border-bottom: 3px solid #2980b9; padding-bottom: 0.3em; }
+h2 { color: #2471a3; margin-top: 1.5em; }
+code { background: #f4f6f7; padding: 2px 5px; border-radius: 3px; font-family: Consolas, monospace; }
+ul { padding-right: 1.5em; }
+.note { background: #fef9e7; border-right: 4px solid #f1c40f; padding: 0.8em 1em; margin: 1em 0; }
+.warn { background: #fdedec; border-right: 4px solid #e74c3c; padding: 0.8em 1em; margin: 1em 0; }
+</style>
+</head>
+<body>
+
+<h1>PolyVoice — التبديل التلقائي السلس بين الآلات</h1>
+
+<p><strong>الإصدار:</strong> 0.1.0 (تجريبي)<br>
+<strong>المطوّر:</strong> فريد محمد<br>
+<strong>متطلبات NVDA:</strong> 2024.1 أو أحدث (آخر اختبار: 2026.1)</p>
+
+<h2>ما هي PolyVoice؟</h2>
+<p>هي آلة نطق افتراضية لقارئ الشاشة NVDA، تكتشف <strong>ديناميكيًا</strong> كل
+الآلات الناطقة المثبتة على نظامك (مثل IBMTTS/Eloquence، وInfovox3/Acapela،
+وSAPI5، وRHVoice) وتنتقل بينها بسلاسة حسب لغة النص — دون التداخل المزعج
+الذي يحدث في الإضافات الأخرى، حيث تتسرّع الآلة الثانية وتدخل أثناء حديث
+الأولى.</p>
+
+<h2>المشكلة التي تحلّها</h2>
+<p>إذا قرأت جملة عربية تتخلّلها كلمة إنجليزية، مثل
+«استخدمت المكتبة <code>pandas</code> لمعالجة البيانات»، فإنك تتوقع أن
+تنطق الآلة العربية الجملة كاملة، وعند الكلمة الإنجليزية تنتقل بهدوء إلى
+آلة إنجليزية، ثم تعود للعربية. هذا ما تفعله PolyVoice.</p>
+
+<div class="note">
+<strong>الفكرة الجوهرية:</strong> قائمة انتظار تسلسلية صارمة — لا تبدأ
+الآلة الثانية النطق حتى تنهي الأولى فعليًا.
+</div>
+
+<h2>التثبيت</h2>
+<ol>
+<li>نزّل ملف <code>PolyVoice-0.1.0.nvda-addon</code>.</li>
+<li>اضغط عليه مرّتين أو افتحه من NVDA → أدوات → تثبيت إضافة.</li>
+<li>أعد تشغيل NVDA.</li>
+</ol>
+
+<h2>الإعداد الأولي</h2>
+<ol>
+<li>من NVDA → الإعدادات → متنوعة → PolyVoice.</li>
+<li>تأكّد أن «تفعيل التبديل التلقائي» مُفعّل.</li>
+<li>لكل لغة (العربية / الإنجليزية) اختر آلةً من القائمة المنسدلة، ثم صوتًا
+من القائمة التالية. القوائم تعرض فقط الآلات المثبتة فعليًا على نظامك.</li>
+<li>اضغط «تطبيق» ثم «موافق».</li>
+<li>من NVDA → الإعدادات → الصوت، اختر <code>PolyVoice</code> كآلة ناطقة.</li>
+</ol>
+
+<div class="warn">
+<strong>تنبيه:</strong> يجب أن تكون الآلات الأخرى (IBMTTS، Infovox3، ...)
+مثبّتة على NVDA قبل تثبيت PolyVoice. هي لا تأتي بأي آلة مدمجة — هي فقط
+تُنسّق بينها.
+</div>
+
+<h2>اختصارات لوحة المفاتيح</h2>
+<ul>
+<li><code>NVDA+Ctrl+Shift+V</code> — فتح إعدادات PolyVoice مباشرةً.</li>
+</ul>
+
+<h2>كيف تعمل؟ (للمطوّرين)</h2>
+<p>تتكوّن PolyVoice من أربع طبقات منفصلة:</p>
+<ol>
+<li><strong>كاشف اللغة:</strong> يفحص نطاق Unicode لكل حرف (نانوثوانٍ)
+للتمييز الفوري بين العربية والإنجليزية.</li>
+<li><strong>مدير الآلات:</strong> يكتشف كل <code>SynthDriver</code> مثبّت
+عبر <code>synthDriverHandler.getSynthList()</code> ويحتفظ بنسخ ناشطة
+مؤقّتة (pre-warmed) لتفادي تأخير التبديل.</li>
+<li><strong>مدير المهام:</strong> خيط عامل واحد يستهلك مهمة نطق في كل دورة،
+ولا ينتقل للتالية حتى تُطلق الآلة الحالية <code>synthDoneSpeaking</code>.
+هذا هو ما يمنع التداخل.</li>
+<li><strong>الواجهة الرئيسية:</strong> SynthDriver افتراضية تُعلن قدراتها
+لـ NVDA وتُفوّض العمل للطبقات الأدنى.</li>
+</ol>
+
+<h2>النطاق الحالي (0.1.0)</h2>
+<ul>
+<li>دعم لغتين: العربية والإنجليزية.</li>
+<li>كشف لغة عبر Unicode range.</li>
+<li>واجهة إعدادات لربط كل لغة بآلة + صوت.</li>
+</ul>
+
+<h2>المصادر والمراجع</h2>
+<ul>
+<li>بنية VoiceManager/TaskManager مستوحاة من WorldVoice (مفتوح المصدر).</li>
+<li>الاكتشاف الديناميكي عبر <code>synthDriverHandler.getSynthList()</code>
+الرسمي لـ NVDA.</li>
+</ul>
+
+</body>
+</html>

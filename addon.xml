@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon id="PolyVoice" xmlns="http://wireless-transit.com/nvda-addon-manifest">
+	<info>
+		<name>PolyVoice</name>
+		<display-name>PolyVoice - التبديل التلقائي السلس بين الآلات</display-name>
+		<description>PolyVoice - تبديل تلقائي سلس بين آلات النطق حسب لغة النص</description>
+		<version>0.1.0</version>
+		<author>Farid Muhammad</author>
+		<url>https://github.com/farid/PolyVoice</url>
+		<license>GPL v3</license>
+		<homepage>https://github.com/farid/PolyVoice</homepage>
+		<dependencies>
+			<nvda-min-version>2024.1.0</nvda-min-version>
+		</dependencies>
+		<packaged-files>
+			<pkg-file path="PolyVoice/__init__.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/synthDrivers/PolyVoice/__init__.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/synthDrivers/PolyVoice/languageDetection.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/synthDrivers/PolyVoice/taskManager.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/synthDrivers/PolyVoice/voiceManager.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/synthDrivers/PolyVoice/voiceInfo.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/globalPlugins/PolyVoice/__init__.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/globalPlugins/PolyVoice/settingsPanel.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/globalPlugins/__init__.py" install-in="addon-install"/>
+			<pkg-file path="PolyVoice/documentation/readme.html" install-in="addon-install"/>
+		</packaged-files>
+	</info>
+</addon>
