@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>PolyVoice — Add-on User Guide</title>
+<style>
+body { font-family: "Segoe UI", Tahoma, sans-serif; line-height: 1.7; padding: 1em 2em; max-width: 800px; margin: auto; }
+h1 { color: #1a5276; border-bottom: 3px solid #2980b9; padding-bottom: 0.3em; }
+h2 { color: #2471a3; margin-top: 1.5em; }
+code { background: #f4f6f7; padding: 2px 5px; border-radius: 3px; font-family: Consolas, monospace; }
+ul, ol { padding-left: 1.5em; }
+.note { background: #fef9e7; border-left: 4px solid #f1c40f; padding: 0.8em 1em; margin: 1em 0; }
+.warn { background: #fdedec; border-left: 4px solid #e74c3c; padding: 0.8em 1em; margin: 1em 0; }
+</style>
+</head>
+<body>
+
+<h1>PolyVoice — Seamless Multi-Language Synthesizer Router</h1>
+
+<p><strong>Version:</strong> 1.0.0-beta<br>
+<strong>Author:</strong> Farid Muhammad<br>
+<strong>Repository:</strong> <a href="https://github.com/farid5006/PolyVoice">https://github.com/farid5006/PolyVoice</a></p>
+
+<h2>What is PolyVoice?</h2>
+<p>PolyVoice is a hybrid virtual synthesizer driver and intelligent language router for the NVDA screen reader. It dynamically detects all speech synthesizers installed on your system (such as IBMTTS, SAPI5, Windows OneCore, eSpeak NG, RHVoice, Piper) and seamlessly routes speech to them based on text language, without audio overlap or speech racing.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li><strong>Pure Router Architecture:</strong> Respects each synthesizer's individual settings (rate, pitch, volume) configured in NVDA. It does not force or override your engine settings.</li>
+<li><strong>Character-Level Language Detection:</strong> Accurately isolates non-Arabic or foreign words embedded in sentences down to the character level.</li>
+<li><strong>Zero Audio Overlap:</strong> Smart queueing with digital stamp tracking prevents speech engines from speaking over each other.</li>
+</ul>
+
+<h2>Configuration & Setup</h2>
+<ol>
+<li>Open <strong>NVDA Menu</strong> ➔ <strong>Preferences</strong> ➔ <strong>Settings...</strong> (or press <code>NVDA + Control + G</code>).</li>
+<li>Select <strong>PolyVoice</strong> from the categories list.</li>
+<li>Ensure <strong>Enable automatic language switching</strong> is checked.</li>
+<li>Select a <strong>Language</strong> from the drop-down menu (e.g. English, French).</li>
+<li>Select your preferred <strong>Synthesizer Engine</strong> for that language.</li>
+<li>Click <strong>Assign engine to language</strong>.</li>
+<li>Repeat for any other languages you wish to customize.</li>
+<li>Click <strong>OK</strong> to save your settings.</li>
+<li>Press <code>NVDA + Control + S</code> to open the Synthesizer selection dialog and select <strong>PolyVoice</strong>.</li>
+</ol>
+
+<h2>Useful NVDA Shortcuts</h2>
+<ul>
+<li><code>NVDA + Control + G</code> — Open NVDA Settings dialog (then select PolyVoice category).</li>
+<li><code>NVDA + Control + S</code> — Open NVDA Synthesizer selection dialog (to select PolyVoice).</li>
+</ul>
+
+</body>
+</html>
