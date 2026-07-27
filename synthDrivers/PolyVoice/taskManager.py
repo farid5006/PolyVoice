@@ -24,6 +24,7 @@ class TaskManager(object):
         self._pauseEvent = threading.Event()
         self._currentTask = None
         self._lock = threading.Lock()
+        self._synthLock = threading.Lock()
 
         try:
             self._workerThread = threading.Thread(
@@ -41,11 +42,12 @@ class TaskManager(object):
             self._pauseEvent.set()
         else:
             self._pauseEvent.clear()
-        for instance in self._vm._instanceCache.values():
-            try:
-                instance.pause(switch)
-            except Exception:
-                pass
+        with self._synthLock:
+            for instance in self._vm._instanceCache.values():
+                try:
+                    instance.pause(switch)
+                except Exception:
+                    pass
 
     def cancelAll(self):
         # 1. تفريغ قائمة المهام المحجوزة
@@ -60,13 +62,9 @@ class TaskManager(object):
             task = self._currentTask
             self._currentTask = None
 
-        if task and task.instance:
-            try:
-                task.instance.cancel()
-            except Exception:
-                pass
-
-        self._vm.cancelAll()
+        # استخدام القفل لمنع تداخل أوامر الإيقاف مع النطق
+        with self._synthLock:
+            self._vm.cancelAll()
 
     def shutdown(self):
         self._stopEvent.set()
@@ -98,9 +96,19 @@ class TaskManager(object):
         with self._lock:
             self._currentTask = task
 
+        # ممتص صدمات (Debounce) لامتصاص الأوامر المتلاحقة عند التنقل السريع
+        import time
+        time.sleep(0.03)  # تأخير 30 ملي ثانية
+
+        with self._lock:
+            # إذا تم تفريغ المهمة بواسطة cancelAll أثناء فترة الانتظار، نتجاهل النطق
+            if self._currentTask is not task:
+                return
+
         try:
-            # تنفيذ النطق بصورة آمنة ومستقرة دون تعديل كائنات C++ الخاصة بـ COM
-            instance.speak(task.segment.items)
+            # تنفيذ النطق بصورة آمنة ومستقرة داخل القفل لمنع تداخل الإيقاف
+            with self._synthLock:
+                instance.speak(task.segment.items)
         except Exception:
             log.exception("PolyVoice: استثناء أثناء تنفيذ نطق المقطع")
         finally:

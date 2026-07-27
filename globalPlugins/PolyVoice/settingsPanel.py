@@ -34,6 +34,8 @@ def _ensureConfig():
         config.conf["PolyVoice"]["bindings"] = {}
     if "enableAutoSwitch" not in config.conf["PolyVoice"]:
         config.conf["PolyVoice"]["enableAutoSwitch"] = True
+    if "switchDelay" not in config.conf["PolyVoice"]:
+        config.conf["PolyVoice"]["switchDelay"] = 50
 
 
 class PolyVoiceSettingsPanel(SettingsPanel):
@@ -53,6 +55,18 @@ class PolyVoiceSettingsPanel(SettingsPanel):
             )
         except Exception:
             self.autoSwitchCheckBox.Value = True
+
+        # 1.5 Switch Delay SpinCtrl
+        self.switchDelaySpin = sHelper.addLabeledControl(
+            _("Delay when switching synthesizers (in milliseconds):"),
+            wx.SpinCtrl,
+            min=0,
+            max=1000
+        )
+        try:
+            self.switchDelaySpin.Value = int(config.conf["PolyVoice"].get("switchDelay", 50))
+        except Exception:
+            self.switchDelaySpin.Value = 50
 
         # 2. Fetch installed engines
         try:
@@ -170,6 +184,7 @@ class PolyVoiceSettingsPanel(SettingsPanel):
     def onSave(self):
         _ensureConfig()
         config.conf["PolyVoice"]["enableAutoSwitch"] = self.autoSwitchCheckBox.Value
+        config.conf["PolyVoice"]["switchDelay"] = self.switchDelaySpin.Value
         
         config.conf["PolyVoice"]["bindings"] = dict(self._tempBindings)
         

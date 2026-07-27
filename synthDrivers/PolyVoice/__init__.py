@@ -65,6 +65,7 @@ class SynthDriver(_SynthBase):
             
             self._speechIdCounter = 0
             self._indexReachedForCurrentSpeech = True
+            self._isPumpScheduled = False
 
             synthDoneSpeaking.register(self._onSynthDoneSpeaking)
             synthIndexReached.register(self._onSynthIndexReached)
@@ -79,6 +80,9 @@ class SynthDriver(_SynthBase):
 
     def _onSynthDoneSpeaking(self, synth):
         if synth is not self:
+            if synth is not getattr(self, "_activeSynth", None):
+                return
+                
             if not getattr(self, "_indexReachedForCurrentSpeech", True):
                 # تم إلغاء نطق سابق، وهذا الإشعار قديم وتصادم مع النطق الجديد
                 return
@@ -87,7 +91,9 @@ class SynthDriver(_SynthBase):
                 self._doneSpeakingEvent.set()
                 synthDoneSpeaking.notify(synth=self)
                 return
-            self._safeCallAfter(self._pumpSpeech)
+            if not getattr(self, "_isPumpScheduled", False):
+                self._isPumpScheduled = True
+                self._safeCallAfter(self._pumpSpeech)
 
     def _onSynthIndexReached(self, synth, index):
         if synth is not self:
@@ -113,6 +119,7 @@ class SynthDriver(_SynthBase):
             wx.CallLater(delay, func)
 
     def _pumpSpeech(self):
+        self._isPumpScheduled = False
         if not hasattr(self, "_speechQueue"):
             return
             
@@ -126,30 +133,42 @@ class SynthDriver(_SynthBase):
 
         next_instance = self._voiceManager.get_voice_instance(seg.lang)
         if not next_instance:
-            self._safeCallAfter(self._pumpSpeech)
+            if not getattr(self, "_isPumpScheduled", False):
+                self._isPumpScheduled = True
+                self._safeCallAfter(self._pumpSpeech)
             return
 
-        # إضافة فاصل زمني عند التبديل بين آلتين مختلفتين للسماح لكارت الصوت بالتفريغ
         delay = 0
         if self._activeSynth and self._activeSynth is not next_instance:
-            delay = 150 # ملي ثانية لتفريغ الـ Buffer
+            try:
+                delay = int(config.conf["PolyVoice"].get("switchDelay", 50))
+            except Exception:
+                delay = 50
 
         self._activeSynth = next_instance
         
         def execute():
+            # إذا تم إلغاء النطق أثناء فترة التأخير، يجب ألا نستمر
+            if self._activeSynth is not next_instance:
+                return
+                
             try:
+                # ضبط المتغيرات *قبل* الإلغاء حتى يتم تجاهل إشعار الانتهاء الوهمي الناتج عن الإلغاء
+                self._speechIdCounter += 1
+                self._indexReachedForCurrentSpeech = False
+                
                 next_instance.cancel()
                 
                 # استخدام IndexCommand فريد لتفادي إشعارات الانتهاء القديمة عند الحركة السريعة
-                self._speechIdCounter += 1
-                self._indexReachedForCurrentSpeech = False
                 seg.items.insert(0, IndexCommand(self._speechIdCounter))
                 
                 next_instance.speak(seg.items)
             except Exception:
                 log.exception("PolyVoice: خطأ أثناء نطق المقطع")
                 self._indexReachedForCurrentSpeech = True
-                self._safeCallAfter(self._pumpSpeech)
+                if not getattr(self, "_isPumpScheduled", False):
+                    self._isPumpScheduled = True
+                    self._safeCallAfter(self._pumpSpeech)
 
         if delay > 0:
             self._safeCallLater(delay, execute)
@@ -169,7 +188,8 @@ class SynthDriver(_SynthBase):
         for seg in segments:
             self._speechQueue.put(seg)
             
-        if self._activeSynth is None:
+        if self._activeSynth is None and not getattr(self, "_isPumpScheduled", False):
+            self._isPumpScheduled = True
             self._safeCallAfter(self._pumpSpeech)
 
     def cancel(self):
