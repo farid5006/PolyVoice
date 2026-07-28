@@ -84,8 +84,11 @@ class SynthDriver(_SynthBase):
                 return
                 
             if not getattr(self, "_indexReachedForCurrentSpeech", True):
-                # تم إلغاء نطق سابق، وهذا الإشعار قديم وتصادم مع النطق الجديد
-                return
+                import time
+                # إذا مرت فترة قصيرة جداً (أقل من 200 ملي ثانية) منذ أمر النطق، فهو غالباً إشعار قديم من نطق ملغى.
+                # أما إذا مرت فترة أطول ولم يصلنا أي إشعار Index، فغالباً الآلة حذفت الـ IndexCommands وعلينا قبول الانتهاء.
+                if time.time() - getattr(self, "_currentSpeechStartTime", 0) < 0.2:
+                    return
                 
             if not self._doneSpeakingEvent.is_set():
                 self._doneSpeakingEvent.set()
@@ -97,7 +100,7 @@ class SynthDriver(_SynthBase):
 
     def _onSynthIndexReached(self, synth, index):
         if synth is not self:
-            if index == getattr(self, "_speechIdCounter", -1):
+            if hasattr(self, "_currentSpeechIndices") and index in getattr(self, "_currentSpeechIndices", set()):
                 self._indexReachedForCurrentSpeech = True
             synthIndexReached.notify(synth=self, index=index)
 
@@ -162,6 +165,13 @@ class SynthDriver(_SynthBase):
                 # استخدام IndexCommand فريد لتفادي إشعارات الانتهاء القديمة عند الحركة السريعة
                 seg.items.insert(0, IndexCommand(self._speechIdCounter))
                 
+                self._currentSpeechIndices = set()
+                for item in seg.items:
+                    if isinstance(item, IndexCommand):
+                        self._currentSpeechIndices.add(item.index)
+                
+                import time
+                self._currentSpeechStartTime = time.time()
                 next_instance.speak(seg.items)
             except Exception:
                 log.exception("PolyVoice: خطأ أثناء نطق المقطع")

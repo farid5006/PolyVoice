@@ -1,0 +1,643 @@
+INFO - __main__ (01:28:50.319) - MainThread (17484):
+Starting NVDA version 2026.1.1 AMD64
+INFO - core.main (01:28:50.404) - MainThread (17484):
+Config dir: C:\Users\Mohammed\AppData\Roaming\nvda
+INFO - config.ConfigManager._loadConfig (01:28:50.411) - MainThread (17484):
+Loading config: C:\Users\Mohammed\AppData\Roaming\nvda\nvda.ini
+INFO - core.main (01:28:52.266) - MainThread (17484):
+Windows version: Windows 11 25H2 (10.0.26200.8894) workstation AMD64
+INFO - core.main (01:28:52.267) - MainThread (17484):
+Using Python version 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
+INFO - core.main (01:28:52.267) - MainThread (17484):
+Using comtypes version 1.4.13
+INFO - core.main (01:28:52.270) - MainThread (17484):
+Using configobj version 5.1.0 with validate version 1.0.1
+WARNING - addonHandler._report_manifest_errors (01:28:52.992) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2026, 1, 0)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:52.993) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\clipContentsDesigner
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.001) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2025, 3, 0)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.001) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\dual_voice
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.003) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2026, 1, 0)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.003) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\emoticons
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.005) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2025, 3, 3)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.005) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\goldwave
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.010) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2026, 1, 0)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.010) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\LION
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.011) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\mouse guide
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 641, in __init__
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Mohammed\\AppData\\Roaming\\nvda\\addons\\mouse guide\\manifest.ini'
+WARNING - addonHandler._report_manifest_errors (01:28:53.024) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2025, 3, 3)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.024) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\objPad
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.028) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\piper_neural_voices
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 641, in __init__
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Mohammed\\AppData\\Roaming\\nvda\\addons\\piper_neural_voices\\manifest.ini'
+WARNING - addonHandler._report_manifest_errors (01:28:53.047) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2025, 3, 3)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.047) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\resourceMonitor
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.050) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2025, 3, 1)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.050) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\sayProductNameAndVersion
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.055) - MainThread (17484):
+Error loading manifest:
+{'name': True, 'summary': True, 'description': VdtTypeError('the value "[\'If you press NVDA+s\', \'speech mode beeps is omited\', \'just like in jfw.\']" is of the wrong type.'), 'author': True, 'version': True, 'changelog': True, 'minimumNVDAVersion': True, 'lastTestedNVDAVersion': True, 'url': True, 'docFileName': True, 'brailleTables': True, 'symbolDictionaries': True}
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.055) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\speech_beep_omiter
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+WARNING - addonHandler._report_manifest_errors (01:28:53.063) - MainThread (17484):
+Error loading manifest:
+Constraint not met: minimumNVDAVersion ((2026, 1, 0)) <= lastTestedNVDAVersion ((2025, 1, 1))
+ERROR - addonHandler._getAvailableAddonsFromPath (01:28:53.063) - MainThread (17484):
+Error loading Addon from path: C:\Users\Mohammed\AppData\Roaming\nvda\addons\unmute
+Traceback (most recent call last):
+  File "addonHandler\__init__.pyc", line 458, in _getAvailableAddonsFromPath
+  File "addonHandler\__init__.pyc", line 652, in __init__
+addonHandler.AddonError: Manifest file has errors.
+INFO - synthDriverHandler.setSynth (01:28:53.685) - MainThread (17484):
+Loaded synthDriver ibmeci
+INFO - mathPres.MathCAT.MathCAT.MathCAT.__init__ (01:28:53.701) - MainThread (17484):
+MathCAT 0.7.2 installed. Using rules dir: C:\Program Files\NVDA\include\nvda-mathcat\assets\Rules
+INFO - core._setUpWxApp (01:28:53.806) - MainThread (17484):
+Using wx version 4.2.4 msw (phoenix) wxWidgets 3.2.8
+INFO - brailleInput.initialize (01:28:53.815) - MainThread (17484):
+Braille input initialized
+INFO - braille.initialize (01:28:53.815) - MainThread (17484):
+Using liblouis version 3.36.0
+INFO - braille.initialize (01:28:53.815) - MainThread (17484):
+Using pySerial version 3.5
+ERROR - braille.BrailleHandler.setDisplayByName (01:28:53.818) - MainThread (17484):
+Error initializing display driver 'brailleNote'
+Traceback (most recent call last):
+  File "braille.pyc", line 2792, in setDisplayByName
+  File "braille.pyc", line 2862, in _setDisplay
+  File "braille.pyc", line 2832, in _switchDisplay
+  File "extensionPoints\util.pyc", line 230, in callWithSupportedKwargs
+  File "brailleDisplayDrivers\brailleNote.pyc", line 178, in __init__
+RuntimeError: Can't find a braillenote device (port = COM3)
+INFO - braille.BrailleHandler._setDisplay (01:28:53.823) - MainThread (17484):
+Loaded braille display driver 'noBraille', current display has 0 cells.
+INFO - core.main (01:28:54.064) - MainThread (17484):
+Java Access Bridge support initialized
+INFO - UIAHandler.UIAHandler.MTAThreadFunc (01:28:54.185) - UIAHandler.UIAHandler.MTAThread (13092):
+UIAutomation: IUIAutomation6
+INFO - external:globalPlugins.TiendaNVDA.actualizadorRecursos.ActualizadorRecursos.integrarMenuHerramientas (01:28:57.009) - MainThread (17484):
+ActualizadorRecursos: submenú 'Actualizar recursos' creado
+INFO - external:globalPlugins.TiendaNVDA.actualizadorRecursos.ActualizadorRecursos.integrarMenuHerramientas (01:28:57.010) - MainThread (17484):
+ActualizadorRecursos: item de menú 'TiendaNVDA' agregado
+INFO - external:globalPlugins.PolyVoice.GlobalPlugin.__init__ (01:28:57.695) - MainThread (17484):
+PolyVoice: Settings panel registered successfully
+INFO - external:globalPlugins.phoonnx (01:28:57.702) - MainThread (17484):
+Phoonnx Global Plugin: SUCCESS: PhoonnxVoiceManagerPanel successfully imported.
+INFO - external:globalPlugins.phoonnx.GlobalPlugin.__init__ (01:28:57.702) - MainThread (17484):
+Phoonnx Global Plugin: Settings Panel successfully REGISTERED in NVDA.
+WARNING - config.__getattr__ (01:28:57.768) - MainThread (17484):
+addConfigDirsToPythonPackagePath is deprecated, use addonHandler.packaging.addDirsToPythonPackagePath instead.
+WARNING - config.__getattr__ (01:28:57.798) - MainThread (17484):
+addConfigDirsToPythonPackagePath is deprecated, use addonHandler.packaging.addDirsToPythonPackagePath instead.
+WARNING - stdout (01:28:57.926) - MainThread (17484):
+Could not import the PyAudio C module 'pyaudio._portaudio'.
+INFO - external:globalPlugins.NativeSpeechGeneration.core.vendor_loader._create_runtime (01:28:58.304) - MainThread (17484):
+vendor_loader: resolved versions {'httpx': '0.28.1'}
+WARNING - external:globalPlugins.NativeSpeechGeneration.core.vendor_loader._create_runtime (01:28:58.304) - MainThread (17484):
+vendor_loader: failed to import google.genai: ModuleNotFoundError("No module named 'pydantic_core._pydantic_core'") | Binary compatibility mismatch for 'pydantic_core\_pydantic_core.cp311-win32.pyd': built for cp311-win32, current runtime is cp313-win_amd64. Reinstall the add-on libraries using NVDA's embedded Python.
+WARNING - external:globalPlugins.NativeSpeechGeneration.core.vendor_loader._create_runtime (01:28:58.304) - MainThread (17484):
+vendor_loader: failed to import pyaudio: ModuleNotFoundError("No module named 'pyaudio._portaudio'") | Binary compatibility mismatch for 'pyaudio\_portaudio.cp311-win32.pyd': built for cp311-win32, current runtime is cp313-win_amd64. Reinstall the add-on libraries using NVDA's embedded Python.
+WARNING - external:globalPlugins.NativeSpeechGeneration.core.gemini_imports (01:28:58.304) - MainThread (17484):
+google-genai not available via isolated vendor loader
+WARNING - external:globalPlugins.NativeSpeechGeneration.core.gemini_imports (01:28:58.305) - MainThread (17484):
+PyAudio not available via isolated vendor loader
+WARNING - gui.__getattr__ (01:28:58.366) - MainThread (17484):
+Importing SettingsPanel from here is deprecated. Import SettingsPanel from gui.settingsDialogs instead. 
+Stack trace:
+  File "nvda.pyw", line 309, in <module>
+  File "core.pyc", line 919, in main
+  File "globalPluginHandler.pyc", line 31, in initialize
+  File "globalPluginHandler.pyc", line 23, in listPlugins
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\islamicRadio\globalPlugins\islamicRadio\__init__.py", line 735, in <module>
+    class IslamicRadioPanel(gui.SettingsPanel):
+  File "gui\__init__.pyc", line 122, in __getattr__
+INFO - _remoteClient.client.RemoteClient.__init__ (01:28:58.788) - MainThread (17484):
+Initializing NVDA Remote client
+INFO - core.main (01:28:58.790) - MainThread (17484):
+NVDA initialized
+INFO - external:globalPlugins.PolyVoice.GlobalPlugin._addMenuItem (01:28:58.818) - MainThread (17484):
+PolyVoice: Added menu item to Preferences menu successfully
+ERROR - synthDriverHandler.getSynthList (01:29:01.513) - MainThread (17484):
+Error while importing SynthDriver phoonnx
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 24, in <module>
+    from . import multiarray
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\multiarray.py", line 10, in <module>
+    from . import overrides
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\overrides.py", line 8, in <module>
+    from numpy.core._multiarray_umath import (
+        add_docstring,  _get_implementing_args, _ArrayFunctionDispatcher)
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\_multiarray_umath.py", line 1, in <module>
+    from numpy import ufunc
+ImportError: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 130, in <module>
+    from numpy.__config__ import show as show_config
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__config__.py", line 4, in <module>
+    from numpy.core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 50, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.13 from "C:\Program Files\NVDA\nvda.exe"
+  * The NumPy version is: "1.26.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "synthDriverHandler.pyc", line 450, in getSynthList
+  File "synthDriverHandler.pyc", line 437, in _getSynthDriver
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\synthDrivers\phoonnx\__init__.py", line 69, in <module>
+    import numpy as np
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 135, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+ERROR - synthDriverHandler.getSynthList (01:29:07.589) - MainThread (17484):
+Error while importing SynthDriver phoonnx
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 24, in <module>
+    from . import multiarray
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\multiarray.py", line 10, in <module>
+    from . import overrides
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\overrides.py", line 8, in <module>
+    from numpy.core._multiarray_umath import (
+        add_docstring,  _get_implementing_args, _ArrayFunctionDispatcher)
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\_multiarray_umath.py", line 1, in <module>
+    from numpy import ufunc
+ImportError: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 130, in <module>
+    from numpy.__config__ import show as show_config
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__config__.py", line 4, in <module>
+    from numpy.core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 50, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.13 from "C:\Program Files\NVDA\nvda.exe"
+  * The NumPy version is: "1.26.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "synthDriverHandler.pyc", line 450, in getSynthList
+  File "synthDriverHandler.pyc", line 437, in _getSynthDriver
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\synthDrivers\phoonnx\__init__.py", line 69, in <module>
+    import numpy as np
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 135, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.737) - MainThread (17484):
+PolyVoice: بدء اكتشاف الآلات المثبتة...
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.737) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: AcaTTS (Acapela Infovox3)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: claritysynthformant (ClaritySynth Formant)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: claritysynth (ClaritySynth Neural)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: espeak (eSpeak NG)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: googleTtsForNvda (Google TTS For NVDA)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: ibmeci (IBMTTS)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: NeuralVoices (Microsoft Neural Voices)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi4_32 (Microsoft Speech API version 4)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi5_32 (Microsoft Speech API version 5 (32 bit))
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi5 (Microsoft Speech API version 5 (64 bit))
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.738) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: MultiLang (MultiLang)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.739) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: vocalizer_expressive2 (Nuance Vocalizer expressive 2.2)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.739) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: supertonic3 (Supertonic-3)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.739) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: tgSpeechBox (TGSpeechBox)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.739) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: oneCore (Windows OneCore voices)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:29:07.739) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: silence (No speech)
+INFO - external:synthDrivers.PolyVoice.SynthDriver.__init__ (01:29:07.739) - MainThread (17484):
+PolyVoice: تهيّأت بنجاح كموزّع بين الآلات
+INFO - synthDriverHandler.setSynth (01:29:07.750) - MainThread (17484):
+Loaded synthDriver PolyVoice
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:07.922) - MainThread (17484):
+PolyVoice: [en] تم إسناد الصوت: 65536
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:07.922) - MainThread (17484):
+PolyVoice: [en] تم إسناد السرعة: 50
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:07.923) - MainThread (17484):
+PolyVoice: تم إنشاء نسخة للآلة ibmeci للغة en
+INFO - external:synthDrivers.AcaTTS.SynthDriver.loadAvailableVoices (01:29:25.308) - MainThread (17484):
+AcaTTS: Loading voice list
+WARNING - external:synthDrivers.AcaTTS.SynthDriver._set_voice (01:29:25.332) - MainThread (17484):
+AcaTTS: Voice '0' not found, falling back to 'Leila22k_HQ'
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:25.512) - MainThread (17484):
+PolyVoice: [ar] تم إسناد الصوت: 0
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:25.512) - MainThread (17484):
+PolyVoice: [ar] تم إسناد السرعة: 70
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:29:25.512) - MainThread (17484):
+PolyVoice: تم إنشاء نسخة للآلة AcaTTS للغة ar
+ERROR - synthDriverHandler.getSynthList (01:30:40.151) - MainThread (17484):
+Error while importing SynthDriver phoonnx
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 24, in <module>
+    from . import multiarray
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\multiarray.py", line 10, in <module>
+    from . import overrides
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\overrides.py", line 8, in <module>
+    from numpy.core._multiarray_umath import (
+        add_docstring,  _get_implementing_args, _ArrayFunctionDispatcher)
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\_multiarray_umath.py", line 1, in <module>
+    from numpy import ufunc
+ImportError: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 130, in <module>
+    from numpy.__config__ import show as show_config
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__config__.py", line 4, in <module>
+    from numpy.core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 50, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.13 from "C:\Program Files\NVDA\nvda.exe"
+  * The NumPy version is: "1.26.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "synthDriverHandler.pyc", line 450, in getSynthList
+  File "synthDriverHandler.pyc", line 437, in _getSynthDriver
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\synthDrivers\phoonnx\__init__.py", line 69, in <module>
+    import numpy as np
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 135, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+INFO - external:synthDrivers.PolyVoice.SynthDriver.terminate (01:30:42.195) - MainThread (17484):
+PolyVoice: أُنهي
+INFO - external:synthDrivers.AcaTTS.SynthDriver.loadAvailableVoices (01:30:42.207) - MainThread (17484):
+AcaTTS: Loading voice list
+WARNING - external:synthDrivers.AcaTTS.SynthDriver._set_voice (01:30:42.243) - MainThread (17484):
+AcaTTS: Voice '0' not found, falling back to 'Leila22k_HQ'
+INFO - synthDriverHandler.setSynth (01:30:42.398) - MainThread (17484):
+Loaded synthDriver AcaTTS
+ERROR - synthDriverHandler.getSynthList (01:30:47.862) - MainThread (17484):
+Error while importing SynthDriver phoonnx
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 24, in <module>
+    from . import multiarray
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\multiarray.py", line 10, in <module>
+    from . import overrides
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\overrides.py", line 8, in <module>
+    from numpy.core._multiarray_umath import (
+        add_docstring,  _get_implementing_args, _ArrayFunctionDispatcher)
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\_multiarray_umath.py", line 1, in <module>
+    from numpy import ufunc
+ImportError: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 130, in <module>
+    from numpy.__config__ import show as show_config
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__config__.py", line 4, in <module>
+    from numpy.core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 50, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.13 from "C:\Program Files\NVDA\nvda.exe"
+  * The NumPy version is: "1.26.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "synthDriverHandler.pyc", line 450, in getSynthList
+  File "synthDriverHandler.pyc", line 437, in _getSynthDriver
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\synthDrivers\phoonnx\__init__.py", line 69, in <module>
+    import numpy as np
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 135, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+ERROR - synthDriverHandler.getSynthList (01:30:50.675) - MainThread (17484):
+Error while importing SynthDriver phoonnx
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 24, in <module>
+    from . import multiarray
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\multiarray.py", line 10, in <module>
+    from . import overrides
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\overrides.py", line 8, in <module>
+    from numpy.core._multiarray_umath import (
+        add_docstring,  _get_implementing_args, _ArrayFunctionDispatcher)
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\_multiarray_umath.py", line 1, in <module>
+    from numpy import ufunc
+ImportError: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 130, in <module>
+    from numpy.__config__ import show as show_config
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__config__.py", line 4, in <module>
+    from numpy.core._multiarray_umath import (
+    ...<3 lines>...
+    )
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\core\__init__.py", line 50, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.13 from "C:\Program Files\NVDA\nvda.exe"
+  * The NumPy version is: "1.26.4"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: cannot import name 'ufunc' from partially initialized module 'numpy' (most likely due to a circular import) (C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py)
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "synthDriverHandler.pyc", line 450, in getSynthList
+  File "synthDriverHandler.pyc", line 437, in _getSynthDriver
+  File "importlib\__init__.pyc", line 88, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\synthDrivers\phoonnx\__init__.py", line 69, in <module>
+    import numpy as np
+  File "C:\Users\Mohammed\AppData\Roaming\nvda\addons\Phoonnx TTS\phoonnx_libs\numpy\__init__.py", line 135, in <module>
+    raise ImportError(msg) from e
+ImportError: Error importing numpy: you should not try to import numpy from
+        its source directory; please exit the numpy source tree, and relaunch
+        your python interpreter from there.
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: بدء اكتشاف الآلات المثبتة...
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: AcaTTS (Acapela Infovox3)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: claritysynthformant (ClaritySynth Formant)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: claritysynth (ClaritySynth Neural)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: espeak (eSpeak NG)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: googleTtsForNvda (Google TTS For NVDA)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: ibmeci (IBMTTS)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.692) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: NeuralVoices (Microsoft Neural Voices)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi4_32 (Microsoft Speech API version 4)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi5_32 (Microsoft Speech API version 5 (32 bit))
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: sapi5 (Microsoft Speech API version 5 (64 bit))
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: MultiLang (MultiLang)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: vocalizer_expressive2 (Nuance Vocalizer expressive 2.2)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: supertonic3 (Supertonic-3)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: tgSpeechBox (TGSpeechBox)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: oneCore (Windows OneCore voices)
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._discoverInstalledEngines (01:30:50.693) - MainThread (17484):
+PolyVoice: اكتشف آلة مثبتة: silence (No speech)
+INFO - external:synthDrivers.PolyVoice.SynthDriver.__init__ (01:30:50.693) - MainThread (17484):
+PolyVoice: تهيّأت بنجاح كموزّع بين الآلات
+INFO - synthDriverHandler.setSynth (01:30:50.702) - MainThread (17484):
+Loaded synthDriver PolyVoice
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.239) - MainThread (17484):
+PolyVoice: [en] تم إسناد الصوت: 65536
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.240) - MainThread (17484):
+PolyVoice: [en] تم إسناد السرعة: 50
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.240) - MainThread (17484):
+PolyVoice: تم إنشاء نسخة للآلة ibmeci للغة en
+INFO - external:synthDrivers.AcaTTS.SynthDriver.loadAvailableVoices (01:30:51.563) - MainThread (17484):
+AcaTTS: Loading voice list
+WARNING - external:synthDrivers.AcaTTS.SynthDriver._set_voice (01:30:51.595) - MainThread (17484):
+AcaTTS: Voice '0' not found, falling back to 'Leila22k_HQ'
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.729) - MainThread (17484):
+PolyVoice: [ar] تم إسناد الصوت: 0
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.730) - MainThread (17484):
+PolyVoice: [ar] تم إسناد السرعة: 70
+INFO - external:synthDrivers.PolyVoice.voiceManager.VoiceManager._create_instance (01:30:51.730) - MainThread (17484):
+PolyVoice: تم إنشاء نسخة للآلة AcaTTS للغة ar
