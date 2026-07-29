@@ -18,7 +18,7 @@ It dynamically detects all speech synthesizers installed on your system and seam
 
 ## ⚙️ Configuration & Setup
 
-1. **Install the Add-on**: Download and install `PolyVoice-1.0.0-beta3.nvda-addon` in NVDA.
+1. **Install the Add-on**: Download and install `PolyVoice-1.0.0-beta4.nvda-addon` in NVDA.
 2. **Configure Language Assignments**:
    * Open **NVDA Menu** ➔ **Preferences** ➔ **Settings...** (or press `NVDA + Control + G`).
    * Select **PolyVoice** from the categories list.

@@ -104,14 +104,34 @@ def detect_char_lang(c, default_latin="en"):
         if lo <= cp <= hi: return "zh"
     return default_latin
 
+_NUMERAL_MAP = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹٫", "01234567890123456789.")
+
 def split_sequence(speechSequence, default_lang="ar"):
     """يقسّم SpeechSequence إلى مقاطع متجانسة اللغة بدقة الحرف الواحد."""
-    segments = []
+    from speech.commands import CharacterModeCommand
+
+    # 1. البحث الاستباقي عن أول لغة فعلية في النص لتفادي إرسال الأوامر الأولية لآلة خاطئة
     current_lang = default_lang
+    for item in speechSequence:
+        if isinstance(item, str):
+            for c in item:
+                cat = unicodedata.category(c)
+                if not (cat.startswith("P") or cat.startswith("Z") or cat.startswith("S") or cat.startswith("M") or cat.startswith("N")):
+                    current_lang = detect_char_lang(c, default_latin="en")
+                    break
+            else:
+                continue
+            break
+
+    segments = []
     current_items = []
+    char_mode_state = None
 
     for item in speechSequence:
         if isinstance(item, str):
+            # معالجة مشكلة الأرقام العربية المشرقية (١٢٣) التي تتجاهلها بعض الآلات مثل Acapela
+            item = item.translate(_NUMERAL_MAP)
+            
             sb = []
             for c in item:
                 cat = unicodedata.category(c)
@@ -125,9 +145,15 @@ def split_sequence(speechSequence, default_lang="ar"):
                     if sb:
                         current_items.append("".join(sb))
                         sb = []
+                    
+                    # لا ننشئ مقطعاً جديداً إلا إذا كان يحتوي على نص فعلي أو علامات فهارس
                     if current_items:
                         segments.append(Segment(current_items, current_lang))
                         current_items = []
+                        # توريث حالة التهجئة للمقطع الجديد إذا كانت مفعلة
+                        if char_mode_state and char_mode_state.state:
+                            current_items.append(char_mode_state)
+                    
                     current_lang = new_lang
                 
                 sb.append(c)
@@ -135,6 +161,8 @@ def split_sequence(speechSequence, default_lang="ar"):
             if sb:
                 current_items.append("".join(sb))
         else:
+            if isinstance(item, CharacterModeCommand):
+                char_mode_state = item
             current_items.append(item)
 
     if current_items:
